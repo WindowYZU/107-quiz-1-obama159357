@@ -48,6 +48,9 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        jSlider1.setMajorTickSpacing(10);
+        jSlider1.setPaintLabels(true);
+        jSlider1.setPaintTicks(true);
         jSlider1.addAncestorListener(new javax.swing.event.AncestorListener() {
             public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -85,7 +88,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(71, 71, 71)
                 .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
@@ -103,13 +106,10 @@ public class NewJFrame extends javax.swing.JFrame {
        model.addElement(jComboBox1.getSelectedItem());
        jComboBox1.updateUI();
        
-       JFrame frame=new JFrame();
-       frame.setSize(300,300);
-       frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-       frame.setLayout(new FlowLayout());
+      
        JComboBox<String>comboBox=new JComboBox<String>();
        JComboBox combo=new JComboBox();
-            for(int i=0;i<=99;i++){
+            for(int i=0;i<=100;i++){
                 combo.addItem(""+i);
             } 
             frame.add(combo);
